@@ -8,10 +8,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-accent/95 backdrop-blur-sm shadow-md">
+    <nav className="sticky top-0 z-50 bg-[#FFFBF7]/95 backdrop-blur-sm shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
-          <div className="flex-shrink-0 flex items-center">
+          <div className="flex-shrink-0 flex items-center gap-3">
+             <img src="/images/logo.webp" alt="Logo" className="h-12 w-auto object-contain" />
             <a href="#" className="font-serif text-2xl font-bold text-secondary">
               Gestoría Integral Díaz Liliana
             </a>
@@ -19,10 +20,10 @@ const Navbar = () => {
           
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
-            <a href="#" className="text-text hover:text-primary px-3 py-2 text-sm font-medium transition-colors">Inicio</a>
-            <a href="#about" className="text-text hover:text-primary px-3 py-2 text-sm font-medium transition-colors">Nosotros</a>
-            <a href="#services" className="text-text hover:text-primary px-3 py-2 text-sm font-medium transition-colors">Nuestros Servicios</a>
-            <a href="#contact" className="text-text hover:text-primary px-3 py-2 text-sm font-medium transition-colors">Contacto</a>
+            <a href="#" className="text-gray-800 hover:text-[#F4A4A4] px-3 py-2 text-sm font-medium transition-colors">Inicio</a>
+            <a href="#about" className="text-gray-800 hover:text-[#F4A4A4] px-3 py-2 text-sm font-medium transition-colors">Nosotros</a>
+            <a href="#services" className="text-gray-800 hover:text-[#F4A4A4] px-3 py-2 text-sm font-medium transition-colors">Nuestros Servicios</a>
+            <a href="#contact" className="text-gray-800 hover:text-[#F4A4A4] px-3 py-2 text-sm font-medium transition-colors">Contacto</a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -44,13 +45,14 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
+      {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-accent border-t border-primary/20">
+        <div className="md:hidden bg-[#FFFBF7] border-t border-gray-100">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="#" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-text hover:text-primary hover:bg-white/50">Inicio</a>
-            <a href="#about" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-text hover:text-primary hover:bg-white/50">Nosotros</a>
-            <a href="#services" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-text hover:text-primary hover:bg-white/50">Nuestros Servicios</a>
-            <a href="#contact" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-text hover:text-primary hover:bg-white/50">Contacto</a>
+            <a href="#" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-[#F4A4A4] hover:bg-gray-50">Inicio</a>
+            <a href="#about" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-[#F4A4A4] hover:bg-gray-50">Nosotros</a>
+            <a href="#services" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-[#F4A4A4] hover:bg-gray-50">Nuestros Servicios</a>
+            <a href="#contact" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-[#F4A4A4] hover:bg-gray-50">Contacto</a>
           </div>
         </div>
       )}
